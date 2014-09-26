@@ -19,11 +19,18 @@
 </body>
 </html>
 '></code></pre>
-	<p>Despite being closely tied to HTML, CSS syntax looks quite different from that of HTML. CSS is made up primarily of three components: selectors, properties, and values. Here is a look of the format of CSS (leaving out the HTML):</p>
+	<p>Despite being closely tied to HTML, CSS syntax looks quite different from that of HTML. CSS is made up primarily of three components: selectors, properties, and values. CSS properties are set to specific values through what is called a <em>declaration</em>, which is a property and value pair. Selectors specify which HTML element(s) the declarations are applied to. Here is a look of the format of CSS (leaving out the HTML):</p>
 <pre><code class='code-block' data-code='
 selector {
 	property: value;
 }
 '></code></pre>
-	<p>Note that this isn't real CSS, just an example of what CSS looks like. Here, the <em>selector</em> specifies an HTML element on to apply the styling, which is contained within the brackets:<code>{ }</code>. Inside the brackets, we have <code>property: value;</code>, which sets what is called a <em>property</em>, which is a keyword like <code>color</code>, to a value, like <code>red</code>. Finally, we have the semicolon at the end of the property definition</p>
+	<p>Keep in mind that this isn't valid CSS, just an example of what CSS looks like. CSS declarations for the HTML elements specify contained within the brackets:<code>{ }</code>. Inside the brackets, we have <code>property: value;</code>, which sets what is called a <em>property</em>, which is a keyword like <code>color</code>, to a value, like <code>red</code>. Finally, we have the semicolon at the end of the declaration in order to separate each declaration. Here's what some actual CSS might look like:</p>
+<pre><code class='code-block' data-code='
+h1 {
+	color: red;
+}
+'></code></pre>
+	<p>This CSS snippet would take all the <code>&lt;h1&gt;</code> elements, and apply <code>color: red;</code> to each one. <code>color</code> is the text color, and <code>red</code> is the, you guessed it, the color red, so this snippet would turn all of the <code>&lt;h1&gt;</code> elements and turn their text to the color red.</p>
+	<h1 style='color:red;'>Like this!</h1>
 </section>	

@@ -71,148 +71,141 @@
 			<p>This is an example of a <code>h1</code> element. Try typing this into your text editor and saving it as a .html file (e.g. index.html). Then open the file in your browser. You should see something like this:</p>
 			<h1>This is a heading.</h1>
 			<p>Great, you've made your first HTML page! Now, every HTML page has a similar basic structure, looking something like this:</p>
-<pre><code class='code-block' data-code='
-<html>
-<head>
-	<title>LexHack!</title>
-</head>
-<body>
-	<h1>LexHack!</h1>
-	<p>This is a very empty LexHack website.</p>
-</body>
-</html>'>
-</code></pre>
+			<pre><code class='code-block' data-code='
+				<html>
+				<head>
+					<title>LexHack!</title>
+				</head>
+				<body>
+					<h1>LexHack!</h1>
+					<p>This is a very empty LexHack website.</p>
+				</body>
+				</html>'>
+			</code></pre>
 			<p>Notice that the entire thing is surrounded by <code>&lt;html&gt;</code> tags. Makes sense, right? It's HTML, after all. Inside, there';s two main tags.</p>
-         <p>The first, <code>&lt;head&gt;</code>, is all about the metadata. Stuff like search engine index information, character set, style and script importation, author, and title go here. <code>&lt;title&gt;</code> is pretty straightforward - it's what shows up in the title of the browser tab or window.</p>
-         <p>The second, <code>&lt;body&gt;</code>, is all about content. It';s what shows up in the main display area of the browser. Most of the rest of this HTML tutorial is how to structure this content with more tags, such as the <code>&lt;h1&gt;</code> header tag you saw earlier.</p>
-         <p>Here are some basic tags and what they do - try them out now! Just copy the example into the <code>&lt;body&gt;</code> of the HTML document, and see what shows up. Modify as you wish.</p>
-         <table style="width:100%">
-         <tr> 
-            <td>Tag</td>
-            <td>Example</td>
-            <td>Result</td>
-         </tr>
-         <tr>
-            <td><code>&lt;strong&gt;</code> Bolds the text inside.</td>
-            <td><code>&lt;strong&gt;</code>Word&gt;</code>/strong&gt;</code>: defn</td>
-            <td><strong>word</strong>: defn</td>
-         </tr>
-         <tr>
-            <td><code>&lt;em&gt;</code> Italicizes the text inside.</td>
-            <td>This is <code>&lt;em&gt;</code>really<code>&lt;/em&gt;</code> important.</td>
-            <td>This is <em>really</em> important.</td>
-         </tr>
-         <tr>
-            <td><code>&lt;p&gt;</code> Forms a paragraph (doesn’t mean it’s indented!)</td>
-            <td><code>&lt;p&gt;</code>LexHack is a programming competition.<code>&lt;/p&gt;</code></td>
-            <td><code>&lt;p&gt;</code>You should come!<code>&lt;/p&gt;</code></td>
-            <td>LexHack is a programming competition.<br>You should come!</td>
-         </tr>
-         <tr>
-            <td><code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, <code>&lt;h6&gt;</code> Header tags: used for page titles and such, sized according to number (<code>&lt;h1&gt;</code> is biggest)</td>
-            <td><code>&lt;h1&gt;</code>Welcome!<code>&lt;/h1&gt;</code><br>
-            <code>&lt;h2&gt;</code>Subtitle<code>&lt;/h2&gt;</code><br>
-            <code>&lt;h3&gt;</code>SubSubTitle<code>&lt;/h3&gt;</code></td>
-            <td>
-            text
-            <h1>Welcome!</h1>
-            <h2>Subtitle</h2>
-            <h3>SubSubTitle</h3>
-            text
-            </td>
-         </tr>
-         <tr>
-            <td><code>&lt;br&gt;</code> Line break: puts a line break between content (does not require a closing tag!)</td>
-            <td>This is some text!
-            <code>&lt;br&gt;</code><code>&lt;br&gt;</code>
-            This text is on a different line!</td>
-            <td>This is some text!<br>
-            This text is on a different line!</td>
-         </tr>
-         </table>
-
-         <p>
-            Did it work? Ask a LexHack mentor now if you weren’t able to see what’s described in the table. 
-            For further reference, check out the example application provided with the start guide, called Chirp (download here). Open up index.html in Sublime Text to view the code, and open it up in your browser to run the application. You can “Chirp” messages to our database that will be visible to everyone else at LexHack! Now take a look at the HTML again. You should be able to find some tags you recognize, and most likely a couple new ones. Don’t worry about those too much, but try playing around with the code a little bit. 
-         </p>
-         <p>
-            <strong>Suggested Exercise:</strong>
-            Try adding some “how-to” text of your choice right below the heading. 
-         </p>
-
-         <p>
-            Part 2: CSS
-         </p>
-
-         <p>
-            Part 3: jQuery
-            Now that you’ve learned how to create, format, and style content on a webpage, it’s time to learn how to add functionality and make an actual web *application*. To do this you use Javascript, a programming language built for use with websites. 
-            Javascript lets you manipulate the content on the webpage, and in our case, communicate with the server that stores your application’s data (we’ll get to this in Part 4). 
-         </p>  
-         <p>
-            Manipulating HTML data is also called DOM manipulation, and to make it easier for you we’ve included a “library” of extra Javascript called jQuery in Chirp that you can use in your own code. jQuery’s slogan is “write less, do more”, and will be helpful for you in trying to prototype your application in as little time as possible.
-         </p>
-         <p>
-            jQuery basics: 
-            Selecting HTML - one of the big benefits of jQuery is the ease with which you can use it to select which HTML elements you want to modify. To reference a component of your HTML, you use a dollar sign, followed by parentheses surrounding quoted text specifying an HTML id or a class you want to reference. To reference an id, you quote a “hashtag” followed by the id, and to reference a class you quote a period followed by the class. 
-            Examples:
-            $(“#messages”) // references element with id “messages”
-            $(“.buttons”) // references all elements with class “buttons”
-         </p>
-         <p>
-            Modifying selected HTML - Once you have selected HTML, you need to be able to manipulate it. Manipulations of HTML include changing its contents, moving things around, adding/removing elements, and changing its CSS. In jQuery, these manipulations take the form of “functions” that are appended to the HTML “selector” with a period between them. A basic example might look like this:
-         </p>
-         Suppose you have some HTML like below:
-         <code>&lt;p id='dinosaur-paragraph'&gt;</code>
-         Nothing here right now!
-         <code>&lt;/p&gt;</code> 
-         As you should know at this point, this will display a paragraph that says "Nothing here right now!", with the id "dinosaur-paragraph". It's also possible there might be some CSS applied to that paragraph, but that doesn't matter right now. 
-
-         Now, the following jQuery will change the text of the paragraph:
-         $("#dinosaur-paragraph").html("Dinos are cool!");
-         Here's how this statement works  bit-by-bit:
-         $("#dinosaur-paragraph")
-         Selects the HTML element with the id "dinosaur-paragraph"
-         .html("Dinos are cool!");
-         Changes the HTML between the tags of the element specified in the previous part (in this case "dinosaur-paragraph") to the text specified between the parentheses. In this case, the text is "Dinos are cool!". Keep in mind, quotes are mandatory. 
-
-         Here's a table of some basic jQuery manipulations:
-
-         Function
-         Description
-         $("#example").html("text here");
-         Changes content of tag "example" to "text here". 
-         $("#example").append("text to append"); 
-         Appends "text to append" to the content of tag "example". 
-         $("#example").prepend("text to prepend");
-         Prepends "text to prepend" to the content of tag "example". 
-         $("#example").toggle();
-         Makes element "example" visible if it's currently invisible, or vice-versa. 
-         $("#example").css("property", "value");
-         Modifies the CSS that applies to id "example", setting the value of "property" to "value". 
-
-         Look in main.js of Chirp and you can see some of these jQuery functions being used.
-         Suggested Exercise:
-         Modify Chirp so that messages are displayed in the reverse order. 
-
-         Getting input with jQuery - So far, we can change how we display things by using jQuery functions. The next step is to get input from the user. For the purposes of the example, we're going to be looking at two types of input - text and button. 
-
-         To get the value of a text box, simply use a selector that selects the text box with the function .val(). However, to make use of this, there is one more concept to learn: variables. You define a variable with the keyword "var", then a space, then the name of the variable. Use an equals sign after it to set the value of the variable. 
-
-         Example:
-         var myInput = $("#input").val(); 
-
-         The above statement makes myInput represent the value of the text box with the id "input" at the time that function was used. Then, you can use the variable as a value for other functions.
-         Example:
-         $("#what-did-i-input").html(myInput); 
-
-         This will set the text of the element with id "what-did-i-input" to the text you inputted. Keep in mind, you don't use quotes with your variable name (otherwise it will literally display as the word "myInput"). 
-
-          
+			<p>The first, <code>&lt;head&gt;</code>, is all about the metadata. Stuff like search engine index information, character set, style and script importation, author, and title go here. <code>&lt;title&gt;</code> is pretty straightforward - it's what shows up in the title of the browser tab or window.</p>
+			<p>The second, <code>&lt;body&gt;</code>, is all about content. It';s what shows up in the main display area of the browser. Most of the rest of this HTML tutorial is how to structure this content with more tags, such as the <code>&lt;h1&gt;</code> header tag you saw earlier.</p>
+			<p>Here are some basic tags and what they do - try them out now! Just copy the example into the <code>&lt;body&gt;</code> of the HTML document, and see what shows up. Modify as you wish.</p>
 
 
-      </section>
-   </article>
+			<p>
+				Did it work? Ask a LexHack mentor now if you weren’t able to see what’s described in the table. 
+				For further reference, check out the example application provided with the start guide, called Chirp (download here). Open up index.html in Sublime Text to view the code, and open it up in your browser to run the application. You can “Chirp” messages to our database that will be visible to everyone else at LexHack! Now take a look at the HTML again. You should be able to find some tags you recognize, and most likely a couple new ones. Don’t worry about those too much, but try playing around with the code a little bit. 
+			</p>
+			<p>
+				<strong>Suggested Exercise:</strong>
+				Try adding some “how-to” text of your choice right below the heading. 
+			</p>
+		</section>
+		<section>
+			<header>
+				<h1>CSS</h1>
+			</header>
+			<p>You may have noticed that Chirp, our example application, and generally most websites, look much better than plain one you've made so far.</p>
+			<p>Although a number HTML elements already have some basic formatting, because HTML is a <em>markup language</em>, like we mentioned earlier, its primary use is for labeling different types of webpage content, such as identifying a paragraph or a heading.</p>
+			<p>Cascading Style Sheets, or CSS, is the language used to apply formatting and appearance to a webpage. To include CSS in an HTML file, we include the CSS code between <code>&lt;style&gt;</code> tags, which should generally be included inside of the <code>&lt;head&gt;</code> element. Lets write that into our file:</p>  
+			<pre><code class='code-block' data-code='
+				<html>
+				<head>
+					<title>LexHack!</title>
+					<style>
+
+					</style>
+				</head>
+				<body>
+					<h1>LexHack!</h1>
+					<p>This is a very empty LexHack website.</p>
+				</body>
+				</html>
+				'></code></pre>
+				<p>Despite being closely tied to HTML, CSS syntax looks quite different from that of HTML. CSS is made up primarily of three components: selectors, properties, and values. CSS properties are set to specific values through what is called a <em>declaration</em>, which is a property and value pair. Selectors specify which HTML element(s) the declarations are applied to. Here is a look of the format of CSS (leaving out the HTML):</p>
+				<pre><code class='code-block' data-code='
+					selector {
+					property: value;
+				}
+				'></code></pre>
+				<p>Keep in mind that this isn't valid CSS, just an example of what CSS looks like. CSS declarations for the HTML elements specify contained within the brackets:<code>{ }</code>. Inside the brackets, we have <code>property: value;</code>, which sets what is called a <em>property</em>, which is a keyword like <code>color</code>, to a value, like <code>red</code>. Finally, we have the semicolon at the end of the declaration in order to separate each declaration. Here's what some actual CSS might look like:</p>
+				<pre><code class='code-block' data-code='
+					h1 {
+					color: red;
+				}
+				'></code></pre>
+				<p>This CSS snippet would take all the <code>&lt;h1&gt;</code> elements, and apply <code>color: red;</code> to each one. <code>color</code> is the text color, and <code>red</code> is the, you guessed it, the color red, so this snippet would turn all of the <code>&lt;h1&gt;</code> elements and turn their text to the color red. Putting this into the <code>&lt;style&gt;</code> tags, we would get:</p>
+				<div>
+					<h1 style='color:red;'>LexHack!</h1>
+					<p>This is a very empty LexHack website.</p>
+				</div>
+			</section>	
+
+			<p>
+				Part 3: jQuery
+				Now that you’ve learned how to create, format, and style content on a webpage, it’s time to learn how to add functionality and make an actual web *application*. To do this you use Javascript, a programming language built for use with websites. 
+				Javascript lets you manipulate the content on the webpage, and in our case, communicate with the server that stores your application’s data (we’ll get to this in Part 4). 
+			</p>  
+			<p>
+				Manipulating HTML data is also called DOM manipulation, and to make it easier for you we’ve included a “library” of extra Javascript called jQuery in Chirp that you can use in your own code. jQuery’s slogan is “write less, do more”, and will be helpful for you in trying to prototype your application in as little time as possible.
+			</p>
+			<p>
+				jQuery basics: 
+				Selecting HTML - one of the big benefits of jQuery is the ease with which you can use it to select which HTML elements you want to modify. To reference a component of your HTML, you use a dollar sign, followed by parentheses surrounding quoted text specifying an HTML id or a class you want to reference. To reference an id, you quote a “hashtag” followed by the id, and to reference a class you quote a period followed by the class. 
+				Examples:
+				$(“#messages”) // references element with id “messages”
+				$(“.buttons”) // references all elements with class “buttons”
+			</p>
+			<p>
+				Modifying selected HTML - Once you have selected HTML, you need to be able to manipulate it. Manipulations of HTML include changing its contents, moving things around, adding/removing elements, and changing its CSS. In jQuery, these manipulations take the form of “functions” that are appended to the HTML “selector” with a period between them. A basic example might look like this:
+			</p>
+			Suppose you have some HTML like below:
+			<code>&lt;p id='dinosaur-paragraph'&gt;</code>
+			Nothing here right now!
+			<code>&lt;/p&gt;</code> 
+			As you should know at this point, this will display a paragraph that says "Nothing here right now!", with the id "dinosaur-paragraph". It's also possible there might be some CSS applied to that paragraph, but that doesn't matter right now. 
+
+			Now, the following jQuery will change the text of the paragraph:
+			$("#dinosaur-paragraph").html("Dinos are cool!");
+			Here's how this statement works  bit-by-bit:
+			$("#dinosaur-paragraph")
+			Selects the HTML element with the id "dinosaur-paragraph"
+			.html("Dinos are cool!");
+			Changes the HTML between the tags of the element specified in the previous part (in this case "dinosaur-paragraph") to the text specified between the parentheses. In this case, the text is "Dinos are cool!". Keep in mind, quotes are mandatory. 
+
+			Here's a table of some basic jQuery manipulations:
+
+			Function
+			Description
+			$("#example").html("text here");
+			Changes content of tag "example" to "text here". 
+			$("#example").append("text to append"); 
+			Appends "text to append" to the content of tag "example". 
+			$("#example").prepend("text to prepend");
+			Prepends "text to prepend" to the content of tag "example". 
+			$("#example").toggle();
+			Makes element "example" visible if it's currently invisible, or vice-versa. 
+			$("#example").css("property", "value");
+			Modifies the CSS that applies to id "example", setting the value of "property" to "value". 
+
+			Look in main.js of Chirp and you can see some of these jQuery functions being used.
+			Suggested Exercise:
+			Modify Chirp so that messages are displayed in the reverse order. 
+
+			Getting input with jQuery - So far, we can change how we display things by using jQuery functions. The next step is to get input from the user. For the purposes of the example, we're going to be looking at two types of input - text and button. 
+
+			To get the value of a text box, simply use a selector that selects the text box with the function .val(). However, to make use of this, there is one more concept to learn: variables. You define a variable with the keyword "var", then a space, then the name of the variable. Use an equals sign after it to set the value of the variable. 
+
+			Example:
+			var myInput = $("#input").val(); 
+
+			The above statement makes myInput represent the value of the text box with the id "input" at the time that function was used. Then, you can use the variable as a value for other functions.
+			Example:
+			$("#what-did-i-input").html(myInput); 
+
+			This will set the text of the element with id "what-did-i-input" to the text you inputted. Keep in mind, you don't use quotes with your variable name (otherwise it will literally display as the word "myInput"). 
+
+
+
+
+		</section>
+	</article>
 </body>
 </html>
 
