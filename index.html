@@ -464,22 +464,22 @@ function add(a, b){
 				</p>
 				<strong>jQuery basics:</strong>
 				<em>Selecting HTML</em> -You can select a set of HTML elements just like you would in CSS:
-				<pre><code class='code-block' data-code='
-					$("#messages") // references element with id "messages"
-					$(".buttons") // references all elements with class "buttons"
-					$("#main p") // selects any paragraphs in #main
-					$("#main>section") // selects any sections that are direct descendants of #main
-					'></code></pre>
+<pre><code class='code-block' data-code='
+$("#messages") // references element with id "messages"
+$(".buttons") // references all elements with class "buttons"
+$("#main p") // selects any paragraphs in #main
+$("#main>section") // selects any sections that are direct descendants of #main
+'></code></pre>
 					<p>
 						Modifying selected HTML - Once you have selected HTML, you need to be able to manipulate it. Manipulations of HTML include changing its contents, moving things around, adding/removing elements, and changing its CSS. In jQuery, these manipulations are already-included functions that are appended to the HTML "selector" with a period. A basic example might look like this:
 					</p>
 					<p>
 						Suppose you have some HTML like below:
-						<pre><code class='code-block' data-code='
-							<p id='dinosaur-paragraph'>
-								Nothing here right now!
-							</p> 
-							'></code></pre>
+<pre><code class='code-block' data-code='
+<p id="dinosaur-paragraph">
+	Nothing here right now!
+</p> 
+'></code></pre>
 							As you should know at this point, this will display a paragraph that says "Nothing here right now!", with the id "dinosaur-paragraph". It's also possible there might be some CSS applied to that paragraph, but that doesn't matter right now. 
 							Now, the following jQuery will change the text of the paragraph:
 							<code>$("#dinosaur-paragraph").html("Dinos are cool!");</code>
