@@ -1,0 +1,29 @@
+<section>
+	<header>
+		<h1>CSS</h1>
+	</header>
+	<p>You may have noticed that Chirp, our example application, and generally most websites, look much better than plain one you've made so far.</p>
+	<p>Although a number HTML elements already have some basic formatting, because HTML is a <em>markup language</em>, like we mentioned earlier, its primary use is for labeling different types of webpage content, such as identifying a paragraph or a heading.</p>
+	<p>Cascading Style Sheets, or CSS, is the language used to apply formatting and appearance to a webpage. To include CSS in an HTML file, we include the CSS code between <code>&lt;style&gt;</code> tags, which should generally be included inside of the <code>&lt;head&gt;</code> element. Lets write that into our file:</p>  
+<pre><code class='code-block' data-code='
+<html>
+<head>
+	<title>LexHack!</title>
+	<style>
+
+	</style>
+</head>
+<body>
+	<h1>LexHack!</h1>
+	<p>This is a very empty LexHack website.</p>
+</body>
+</html>
+'></code></pre>
+	<p>Despite being closely tied to HTML, CSS syntax looks quite different from that of HTML. CSS is made up primarily of three components: selectors, properties, and values. Here is a look of the format of CSS (leaving out the HTML):</p>
+<pre><code class='code-block' data-code='
+selector {
+	property: value;
+}
+'></code></pre>
+	<p>Note that this isn't real CSS, just an example of what CSS looks like. Here, the <em>selector</em> specifies an HTML element on to apply the styling, which is contained within the brackets:<code>{ }</code>. Inside the brackets, we have <code>property: value;</code>, which sets what is called a <em>property</em>, which is a keyword like <code>color</code>, to a value, like <code>red</code>. Finally, we have the semicolon at the end of the property definition</p>
+</section>	
