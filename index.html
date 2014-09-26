@@ -42,6 +42,10 @@
 		color: black;
 		font-family: 'Inconsolata';
 	}
+	td {
+		border: 1px solid black;
+		padding: 5px;
+	}
 	pre {
 		-moz-tab-size: 4;
 		-o-tab-size:   4;
@@ -86,8 +90,198 @@
 			<p>The first, <code>&lt;head&gt;</code>, is all about the metadata. Stuff like search engine index information, character set, style and script importation, author, and title go here. <code>&lt;title&gt;</code> is pretty straightforward - it's what shows up in the title of the browser tab or window.</p>
 			<p>The second, <code>&lt;body&gt;</code>, is all about content. It';s what shows up in the main display area of the browser. Most of the rest of this HTML tutorial is how to structure this content with more tags, such as the <code>&lt;h1&gt;</code> header tag you saw earlier.</p>
 			<p>Here are some basic tags and what they do - try them out now! Just copy the example into the <code>&lt;body&gt;</code> of the HTML document, and see what shows up. Modify as you wish.</p>
-
-
+			<div dir="ltr">
+				<table>
+					<colgroup>
+					<col width="207"/>
+					<col width="228"/>
+					<col width="196"/>
+				</colgroup>
+				<tbody>
+					<tr>
+						<td>
+							<p dir="ltr">
+								Tag
+							</p>
+						</td>
+						<td>
+							<p dir="ltr">
+								Example
+							</p>
+						</td>
+						<td>
+							<p dir="ltr">
+								Result
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p dir="ltr">
+								&lt;strong&gt; Bolds the text inside.
+							</p>
+						</td>
+						<td>
+							<p dir="ltr">
+								&lt;strong&gt;Word&lt;/strong&gt;: defn
+							</p>
+						</td>
+						<td>
+							<p dir="ltr">
+								<strong>word</strong>: defn
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p dir="ltr">
+								&lt;em&gt; Italicizes the text inside.
+							</p>
+						</td>
+						<td>
+							<p dir="ltr">
+								This is &lt;em&gt;really&lt;/em&gt; important.
+							</p>
+						</td>
+						<td>
+							<p dir="ltr">
+								This is <em>really</em> important.
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p dir="ltr">
+								&lt;p&gt; Forms a paragraph (doesn’t mean it’s indented!)
+							</p>
+						</td>
+						<td>
+							<p dir="ltr">
+								&lt;p&gt;LexHack is a programming competition.&lt;/p&gt;
+							</p>
+							<p dir="ltr">
+								&lt;p&gt;You should come!&lt;/p&gt;
+							</p>
+						</td>
+						<td>
+							<p dir="ltr">
+								LexHack is a programming competition.
+							</p>
+							<p dir="ltr">
+								You should come!
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p dir="ltr">
+								&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt; Header tags: used for page titles and such, sized according to
+								number (&lt;h1&gt; is biggest)
+							</p>
+						</td>
+						<td>
+							<p dir="ltr">
+								&lt;h1&gt;Welcome!&lt;/h1&gt;
+							</p>
+							<p dir="ltr">
+								&lt;h2&gt;Subtitle&lt;/h2&gt;
+							</p>
+							<p dir="ltr">
+								&lt;h3&gt;SubSubTitle&lt;/h3&gt;
+							</p>
+							<p dir="ltr">
+								text
+							</p>
+						</td>
+						<td>
+							<p dir="ltr">
+								<header>
+									<h1>Welcome!</h1>
+								</header>
+							</p>
+							<p dir="ltr">
+								<h2>Subtitle</h2>
+							</p>
+							<p dir="ltr">
+								<h3>SubSubTitle<h3>
+								</p>
+								<p dir="ltr">
+									text
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p dir="ltr">
+									&lt;br&gt; Line break: puts a line break between content (does not require a closing tag!)
+								</p>
+							</td>
+							<td>
+								<p dir="ltr">
+									This is some text!
+								</p>
+								<p dir="ltr">
+									&lt;br&gt;&lt;br&gt;
+								</p>
+								<p dir="ltr">
+									This text is on a different line!
+								</p>
+							</td>
+							<td>
+								<p dir="ltr">
+									This is some text!
+								</p>
+								<br/>
+								<p dir="ltr">
+									This text is on a different line!
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p dir="ltr">
+									&lt;!-- --&gt; Comment: does absolutely nothing. You can use it to insert annotations explaining your code, or to temporarily remove
+									code you don’t want to delete but which you don’t want to show.
+								</p>
+							</td>
+							<td>
+								<p dir="ltr">
+									&lt;!-- This is the top of the code. --&gt;
+								</p>
+								<p dir="ltr">
+									&lt;!-- &lt;p&gt; ahhhhhhhhhhh this needs to be revised&lt;/p&gt; --&gt;
+								</p>
+							</td>
+							<td>
+								<br/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p dir="ltr">
+									&lt;img src=”imageurl"&gt; Image: inserts an image, specified by the URL in quotes. SRC is called an “attribute”; attributes can be
+									used for many things. See below.
+								</p>
+							</td>
+							<td>
+								<p dir="ltr">
+									&lt;img src="http://goo.gl/hE6opY"&gt;
+								</p>
+							</td>
+							<td>
+								<p dir="ltr">
+									<img
+									src="https://lh5.googleusercontent.com/g5Kfhqj4rPGGA8Mi2Tu2mCwKm98Rgs9Hw-Rs6HhDXT_BXMKu_e_k0r9gSlJ3Wfr4lwgL8Tnxh_2KjDULdfinxHJn3lYWE1ekHSFJgtp7ymtoQ04LpjEoBm8DaGiD6S42bQ"
+									width="155px;"
+									height="155px;"
+									alt="http://images.sodahead.com/polls/000932077/moo_xlarge.jpeg"
+									/>
+								</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 			<p>
 				Did it work? Ask a LexHack mentor now if you weren’t able to see what’s described in the table. 
 				For further reference, check out the example application provided with the start guide, called Chirp (download here). Open up index.html in Sublime Text to view the code, and open it up in your browser to run the application. You can “Chirp” messages to our database that will be visible to everyone else at LexHack! Now take a look at the HTML again. You should be able to find some tags you recognize, and most likely a couple new ones. Don’t worry about those too much, but try playing around with the code a little bit. 
@@ -138,74 +332,291 @@
 			</section>	
 
 			<p>
-				Part 3: jQuery
-				Now that you’ve learned how to create, format, and style content on a webpage, it’s time to learn how to add functionality and make an actual web *application*. To do this you use Javascript, a programming language built for use with websites. 
-				Javascript lets you manipulate the content on the webpage, and in our case, communicate with the server that stores your application’s data (we’ll get to this in Part 4). 
-			</p>  
-			<p>
-				Manipulating HTML data is also called DOM manipulation, and to make it easier for you we’ve included a “library” of extra Javascript called jQuery in Chirp that you can use in your own code. jQuery’s slogan is “write less, do more”, and will be helpful for you in trying to prototype your application in as little time as possible.
+				Javascript is a programming language that is designed to make websites interactive. Right now, we've shown you the technologies necessary to build a website that displays static (not interactive) content. While cool, this doesn't allow you to build a useful application. Javascript allows you to dynamically change content, interact with data from external sources, and take input from the user. 
 			</p>
 			<p>
-				jQuery basics: 
-				Selecting HTML - one of the big benefits of jQuery is the ease with which you can use it to select which HTML elements you want to modify. To reference a component of your HTML, you use a dollar sign, followed by parentheses surrounding quoted text specifying an HTML id or a class you want to reference. To reference an id, you quote a “hashtag” followed by the id, and to reference a class you quote a period followed by the class. 
-				Examples:
-				$(“#messages”) // references element with id “messages”
-				$(“.buttons”) // references all elements with class “buttons”
+				Before we can talk about using Javascript in your own site, we need to go over some basic programming concepts.
 			</p>
 			<p>
-				Modifying selected HTML - Once you have selected HTML, you need to be able to manipulate it. Manipulations of HTML include changing its contents, moving things around, adding/removing elements, and changing its CSS. In jQuery, these manipulations take the form of “functions” that are appended to the HTML “selector” with a period between them. A basic example might look like this:
+				<strong>Variables</strong>
+				Variables in programming are similar to variables in other branches of science/math. They represent some value that can change over time, and this value can be of a variety of different data types. For example, if you were programming a video game, you might have a numeric variable that stores your health level. When you get hit by an enemy, the program might decrease that variable by 1. In Javascript, to define a variable you use the keyword var, which initializes a variable, followed by a space and the name of the variable. Then you use an = and a value to set the initial value of the variable. For example, this sets the value of "foo" to 2.
 			</p>
-			Suppose you have some HTML like below:
-			<code>&lt;p id='dinosaur-paragraph'&gt;</code>
-			Nothing here right now!
-			<code>&lt;/p&gt;</code> 
-			As you should know at this point, this will display a paragraph that says "Nothing here right now!", with the id "dinosaur-paragraph". It's also possible there might be some CSS applied to that paragraph, but that doesn't matter right now. 
-
-			Now, the following jQuery will change the text of the paragraph:
-			$("#dinosaur-paragraph").html("Dinos are cool!");
-			Here's how this statement works  bit-by-bit:
-			$("#dinosaur-paragraph")
-			Selects the HTML element with the id "dinosaur-paragraph"
-			.html("Dinos are cool!");
-			Changes the HTML between the tags of the element specified in the previous part (in this case "dinosaur-paragraph") to the text specified between the parentheses. In this case, the text is "Dinos are cool!". Keep in mind, quotes are mandatory. 
-
-			Here's a table of some basic jQuery manipulations:
-
-			Function
-			Description
-			$("#example").html("text here");
-			Changes content of tag "example" to "text here". 
-			$("#example").append("text to append"); 
-			Appends "text to append" to the content of tag "example". 
-			$("#example").prepend("text to prepend");
-			Prepends "text to prepend" to the content of tag "example". 
-			$("#example").toggle();
-			Makes element "example" visible if it's currently invisible, or vice-versa. 
-			$("#example").css("property", "value");
-			Modifies the CSS that applies to id "example", setting the value of "property" to "value". 
-
-			Look in main.js of Chirp and you can see some of these jQuery functions being used.
-			Suggested Exercise:
-			Modify Chirp so that messages are displayed in the reverse order. 
-
-			Getting input with jQuery - So far, we can change how we display things by using jQuery functions. The next step is to get input from the user. For the purposes of the example, we're going to be looking at two types of input - text and button. 
-
-			To get the value of a text box, simply use a selector that selects the text box with the function .val(). However, to make use of this, there is one more concept to learn: variables. You define a variable with the keyword "var", then a space, then the name of the variable. Use an equals sign after it to set the value of the variable. 
-
-			Example:
-			var myInput = $("#input").val(); 
-
-			The above statement makes myInput represent the value of the text box with the id "input" at the time that function was used. Then, you can use the variable as a value for other functions.
-			Example:
-			$("#what-did-i-input").html(myInput); 
-
-			This will set the text of the element with id "what-did-i-input" to the text you inputted. Keep in mind, you don't use quotes with your variable name (otherwise it will literally display as the word "myInput"). 
-
-
-
-
+			<code>
+				var foo = 2;
+			</code>
+			<p>
+				To change the value of a variable after creating it, you use the equals sign without using the var keyword. For example:
+			</p>
+			<pre><code class='code-block' data-code='
+				var bar = 5;
+				console.log(bar); // outputs 5
+				bar = 16;
+				console.log(bar); //outputs 16, because value of bar has changed
+				'></code></pre>
+				<p>
+					(A quick comment on comments - any code preceded by // is ignored by the Javascript interpreter, just like &gt;!--  --&lt; in HTML - we'll be using this to annotate our examples, and you can do the same in your own code). 
+				</p>
+				<p>
+					Variables don't have to be numbers, either. The other type of variable you might commonly use is called a "string". Strings store text, and work the same way except you define them with quotations surrounding the text. For example,
+				</p>
+				<code>
+					var greeting = "hello world!"; //sets value of greeting to "hello world"
+				</code>
+				<p>
+					<strong> Mathematical Operations</strong> <br>
+					In Javascript, you can use basic mathematical operations on variables/numbers. This is done in a very intuitive way:
+					<code>var a = 2; // a is set to 2</code>
+					<code> var b = a + 3; // b is set to 5</code>
+					The above code block will set b to 5, because it evaluates a + 3, which is equal to 5 for a = 2. 
+				</p>
+				<p>
+					You can do this for all four of the basic operators: +, -, *, and /. There is one other operator that is seen fairly commonly, the modulo operator, represented by %. a % b is equal to the remainder of dividing a by b. For example:
+					<pre><code class='code-block' data-code='
+						var a = 4;
+						var b = 3;
+						var c = a % b;
+						'></code></pre>
+						This block sets c to 1, since the remainder when dividing 4 by 3 is 1.
+					</p>
+					<p>
+						<strong>Control Structures</strong>
+						<p>
+							An important part of programming is the logic that allows your program to interpret and change based on different input. The following are some of the most important control structures in basic programming: 
+						</p>
+						<em>If Statement</em>: Very intuitive, executes the code in curly braces if the statement in parentheses is true. <br>
+						<em>Example</em>: 
+						<pre><code class='code-block' data-code='
+							if(a == 2) {
+							console.log("a equals 2");
+						}
+						else {
+						console.log("a does not equal 2");
+					}
+					'></code></pre>
+				</p>
+				** Important note - a single equals sign is reserved for assigning variables. To test for equality like in the example above, use 2 equals signs (==). 
+				<p>
+					Finally, the <em>else-if</em> clause runs a code block if the previous statements are false, but the statement in the if-else clause is true. For example: 
+					<pre><code class='code-block' data-code='
+						if(a > 0) {
+						console.log("a is positive");
+					}
+					else if(a == 0) {
+					console.log("a equals 0");
+				}
+				else {
+				console.log("a is negative");
+			}         '></code></pre>
+			You can see here how the cases are checked one at a time, with the code under the else statement used kind of like a "default". 
+			<br>
+			<em>While loops</em>:
+			While loops are kind of like if statements, except they run continuously while the statement is true, instead of running once. <br>
+			<em>Example</em>:
+			<pre><code class='code-block' data-code='
+				var a = 1;
+				while(a < 11) {
+				console.log(a);
+				a ++; 
+			}
+			'></code></pre>
+			<p>
+				Since the above while loop runs until the statement is not true (a >= 11), it will print numbers from 1 up to 10. Read it like "while a is less than 11, print out a and increment a."
+			</p>
+		</p>
+		<p>
+			<strong>Functions</strong> <br>
+			Functions are blocks of code that can be executed multiple times in different places. The syntax of a function looks like this: 
+			<pre><code class='code-block' data-code='
+				function printGreeting() {
+				console.log("hello world!");
+			}
+			'></code></pre>
+			This defines a function called "printGreeting." When this function is executed, the program outputs "hello world!". To execute the function, do this:
+			<code> printGreeting(); </code>
+			Functions can also take in what are called parameters. Parameters are values that act like a variables "local" to the function. For example
+			<pre><code class='code-block' data-code='
+				function addTwo(a) {
+				console.log(a + 2);
+			}
+			'></code></pre>
+			This function outputs the value "passed into" the function added to the number 2. addTwo(3) will output 5, while addTwo(7) will output 9. 
+			<br>
+			Functions can also return values.
+			<pre><code class='code-block' data-code='
+				function add(a, b){
+				return a + b;
+			}
+			'></code></pre>
+			This, instead of printing it out like with console.log(), returns the expression, replacing the original function call. Thus: <br>
+			<code>var result = add(3, 5);</code> <br>
+			runs and reduces to <br>
+			<code>var result = 8;</code> <br>
+			which will make the variable result have a value of 8.
 		</section>
-	</article>
-</body>
-</html>
+		<section>
+			<h1>Part 3.5: jQuery</h1>
+			<p>
+				Now that you’ve learned how to create, format, and style content on a webpage, and been exposed to some basic programming concepts, it’s time to practically apply these skills to a web application. Manipulating HTML ("the DOM") can be done entirely in JavaScript, but to make life easier we’re going to be using JQuery, a library of pre-written JavaScript code. jQuery’s slogan is "write less, do more," and might be helpful for you in trying to prototype your application in as little time as possible. You’re technically still writing in JavaScript, though, so all of the above is applicable.
+			</p>
+			<strong>jQuery basics:</strong>
+			<em>Selecting HTML</em> -You can select a set of HTML elements just like you would in CSS:
+			<pre><code class='code-block' data-code='
+				$("#messages") // references element with id "messages"
+				$(".buttons") // references all elements with class "buttons"
+				$("#main p") // selects any paragraphs in #main
+				$("#main>section") // selects any sections that are direct descendants of #main
+				'></code></pre>
+				<p>
+					Modifying selected HTML - Once you have selected HTML, you need to be able to manipulate it. Manipulations of HTML include changing its contents, moving things around, adding/removing elements, and changing its CSS. In jQuery, these manipulations are already-included functions that are appended to the HTML "selector" with a period. A basic example might look like this:
+				</p>
+				<p>
+					Suppose you have some HTML like below:
+					<pre><code class='code-block' data-code='
+						<p id='dinosaur-paragraph'>
+							Nothing here right now!
+						</p> 
+						'></code></pre>
+						As you should know at this point, this will display a paragraph that says "Nothing here right now!", with the id "dinosaur-paragraph". It's also possible there might be some CSS applied to that paragraph, but that doesn't matter right now. 
+						Now, the following jQuery will change the text of the paragraph:
+						<code>$("#dinosaur-paragraph").html("Dinos are cool!");</code>
+						Here's how this statement works  bit-by-bit:
+						<code>$("#dinosaur-paragraph")</code>
+						Selects the HTML element with the id "dinosaur-paragraph"
+						<code>.html("Dinos are cool!");</code>
+						Changes the HTML between the tags of the element specified in the previous part (in this case "dinosaur-paragraph") to the text specified between the parentheses. In this case, the text is "Dinos are cool!". Remember - quotes denote a string in JavaScript.
+					</p>
+					<p>
+						Here's a table of some basic jQuery manipulations:
+						<!-- this was built with some online tool, i'm lazy -->
+						<div dir="ltr">
+							<table>
+								<colgroup>
+								<col width="256"/>
+								<col width="368"/>
+							</colgroup>
+							<tbody>
+								<tr>
+									<td>
+										<p dir="ltr">
+											Function
+										</p>
+									</td>
+									<td>
+										<p dir="ltr">
+											Description
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<p dir="ltr">
+											<code>("#example").html("text here")</code>
+										</p>
+									</td>
+									<td>
+										<p dir="ltr">
+											Changes content of tag "example" to "text here".
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<p dir="ltr">
+											<code>("#example").append("text to append")</code>
+										</p>
+									</td>
+									<td>
+										<p dir="ltr">
+											Appends "text to append" to the content of tag "example".
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<p dir="ltr">
+											<code>("#example").prepend("text to prepend")</code>
+										</p>
+									</td>
+									<td>
+										<p dir="ltr">
+											Prepends "text to prepend" to the content of tag "example".
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<p dir="ltr">
+											<code>("#example").toggle()</code>
+										</p>
+									</td>
+									<td>
+										<p dir="ltr">
+											Makes element "example" visible if it's currently invisible, or vice-versa.
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<p dir="ltr">
+											<code>("#example").css("property", "value")</code>
+										</p>
+									</td>
+									<td>
+										<p dir="ltr">
+											Modifies the CSS that applies to id "example", setting the value of "property" to "value".
+										</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<p>
+						See more DOM manipulation functions at <a href="http://api.jquery.com/category/manipulation/">http://api.jquery.com/category/manipulation/</a>.
+					</p>
+					<p>
+						<em>Getting input with jQuery</em> - So far, we can change how we display things by using jQuery functions. The next step is to get input from the user. For the purposes of the example, we're going to be looking at two types of input - text and button. 
+					</p>
+					<p>
+						To get the value of a text box, simply use a selector that selects the text box with the function .val(). <br>
+						Example: <br>
+						<code>var myInput = $("#input").val();</code>
+						<p>
+							The above statement makes myInput represent the value of the text box with the id "input" at the time that function was used. Then, you can use the variable as a value for other functions.<br>
+							Example:
+						</p>
+						<code>$("#what-did-i-input").html(myInput);</code>
+						<p>
+							This will set the text of the element with id "what-did-i-input" to the text you inputted. Remember that myInput is a variable - so don’t put quotes around it!Keep in mind, you don't use quotes with your variable name (otherwise it will literally display as the word "myInput"). 
+						</p>
+						<p>
+							Next up is detecting when a user clicks on a button, or some other element on the page. The way we do this is by setting what is called a "callback" to the click event. A callback is a function that gets called when some event occurs. Here's an example:
+							<p>
+								<code>&lt;button id="click-me"&gt;Click me!&lt;/button&gt;</code>
+								<pre><code class='code-block' data-code='
+									$("#click-me").click(function() {
+									$("#click-me").html("You just clicked me!");
+								});
+								'></code></pre>
+
+
+								Basically, the way that this works is you're calling a function called "click" to a selector, then putting another function in between the parentheses. It's called an "anonymous function," which is a temporary function that is passed to the Click event. When the Click event is triggered, that anonymous function is run.
+								You can also define a function outside of it:
+								<pre><code class='code-block' data-code='
+									function clickmeclicked(){
+									$("#click-me").html("You just clicked me!");
+								}
+								$("#click-me").click(clickmeclicked);"
+								'></code></pre>
+								<p>
+									For more info, the following is an excellent reference on using jQuery: <a href="http://jqfundamentals.com/chapter/jquery-basics">http://jqfundamentals.com/chapter/jquery-basics</a>.
+								</p>
+								<p>
+									Finally, coming back to our example app Chirp, you can look in main.js to see the Javascript that governs the application. Everything is wrapped in the $(document).ready function described in the jQuery link, and it sets a click listener on the selected submit button $("#submit"). However, the majority of this code you won't understand yet - it requires knowledge of Firebase. 
+								</p>
+							</section>
+						</article>
+						>>>>>>> 1f1e261bce05245682f17f949fe953f7e20e96b8
+					</body>
+					</html>
 
