@@ -8,7 +8,6 @@
 	<meta name='author' content=''>
 	<link rel='shortcut icon' href=''>
 	<title>Start Guide</title>
-	<!-- <link href='tomorrow.css' rel='stylesheet' type='text/css'> -->
 	<link href='tomorrow.css' rel='stylesheet' type='text/css'>
 	<script src='highlight.pack.js'></script>
 	<script>
@@ -95,9 +94,9 @@
 </body>
 </html>
 '></code></pre>
-			<p>Notice that the entire thing is surrounded by <code>&lt;html&gt;</code> tags. Makes sense, right? It's HTML, after all. Inside, there';s two main tags.</p>
+			<p>Notice that the entire thing is surrounded by <code>&lt;html&gt;</code> tags. Makes sense, right? It's HTML, after all. Inside, there are two main tags.</p>
 			<p>The first, <code>&lt;head&gt;</code>, is all about the metadata. Stuff like search engine index information, character set, style and script importation, author, and title go here. <code>&lt;title&gt;</code> is pretty straightforward - it's what shows up in the title of the browser tab or window.</p>
-			<p>The second, <code>&lt;body&gt;</code>, is all about content. It';s what shows up in the main display area of the browser. Most of the rest of this HTML tutorial is how to structure this content with more tags, such as the <code>&lt;h1&gt;</code> header tag you saw earlier.</p>
+			<p>The second, <code>&lt;body&gt;</code>, is all about content. It's what shows up in the main display area of the browser. Most of the rest of this HTML tutorial is how to structure this content with more tags, such as the <code>&lt;h1&gt;</code> header tag you saw earlier.</p>
 			<p>Here are some basic tags and what they do - try them out now! Just copy the example into the <code>&lt;body&gt;</code> of the HTML document, and see what shows up. Modify as you wish.</p>
 			<div dir="ltr">
 				<table>
@@ -304,9 +303,9 @@
 			<header>
 				<h1>Part 2: CSS</h1>
 			</header>
-			<p>You may have noticed that Chirp, our example application, and generally most websites, look much better than plain one you've made so far.</p>
+			<p>You may have noticed that Chirp, our example application, and generally most websites, look much better than the plain one you've made so far.</p>
 			<p>Although a number HTML elements already have some basic formatting, because HTML is a <em>markup language</em>, like we mentioned earlier, its primary use is for labeling different types of webpage content, such as identifying a paragraph or a heading.</p>
-			<p>Cascading Style Sheets, or CSS, is the language used to apply formatting and appearance to a webpage. To include CSS in an HTML file, we include the CSS code between <code>&lt;style&gt;</code> tags, which should generally be included inside of the <code>&lt;head&gt;</code> element. Lets write that into our file:</p>  
+			<p>Cascading Style Sheets, or CSS, is the language used to apply formatting and appearance to a webpage. To include CSS in an HTML file, we include the CSS code between <code>&lt;style&gt;</code> tags, which should generally be included inside of the <code>&lt;head&gt;</code> element. Let's write that into our file:</p>  
 <pre><code class='code-block' data-code='
 <html>
 <head>
@@ -327,7 +326,7 @@ selector {
 	property: value;
 }
 				'></code></pre>
-				<p>Keep in mind that this isn't valid CSS, just an example of what CSS looks like. CSS declarations for the HTML elements specify contained within the brackets:<code>{ }</code>. Inside the brackets, we have <code>property: value;</code>, which sets what is called a <em>property</em>, which is a keyword like <code>color</code>, to a value, like <code>red</code>. Finally, we have the semicolon at the end of the declaration in order to separate each declaration. Here's what some actual CSS might look like:</p>
+				<p>Keep in mind that this isn't valid CSS, just an example of what CSS looks like. CSS declarations for the HTML elements specified are contained within the brackets: <code>{ }</code>. Inside the brackets, we have <code>property: value;</code>, which sets what is called a <em>property</em>, which is a keyword like <code>color</code>, to a value, like <code>red</code>. Finally, we have the semicolon at the end of the declaration in order to separate each declaration. Here's what some actual CSS might look like:</p>
 				<pre><code class='code-block' data-code='
 h1 {
 	color: red;
@@ -367,7 +366,7 @@ bar = 16;
 console.log(bar); //outputs 16, because value of bar has changed
 '></code></pre>
 					<p>
-						(A quick comment on comments - any code preceded by // is ignored by the Javascript interpreter, just like &gt;!--  --&lt; in HTML - we'll be using this to annotate our examples, and you can do the same in your own code). 
+						(A quick comment on comments - any code preceded by // is ignored by the Javascript interpreter, just like &lt;!--  --&gt; in HTML - we'll be using this to annotate our examples, and you can do the same in your own code). 
 					</p>
 					<p>
 						Variables don't have to be numbers, either. The other type of variable you might commonly use is called a "string". Strings store text, and work the same way except you define them with quotations surrounding the text. For example,
@@ -378,8 +377,10 @@ console.log(bar); //outputs 16, because value of bar has changed
 					<p>
 						<strong> Mathematical Operations</strong> <br>
 						In Javascript, you can use basic mathematical operations on variables/numbers. This is done in a very intuitive way:
-						<code>var a = 2; // a is set to 2</code>
-						<code> var b = a + 3; // b is set to 5</code>
+<pre><code class='code-block' data-code='
+var a = 2; // a is set to 2
+var b = a + 3; // b is set to 5
+'></code></pre>
 						The above code block will set b to 5, because it evaluates a + 3, which is equal to 5 for a = 2. 
 					</p>
 					<p>
@@ -592,7 +593,8 @@ $("#main>section") // selects any sections that are direct descendants of #main
 						</p>
 						<p>
 							To get the value of a text box, simply use a selector that selects the text box with the function .val(). <br>
-							Example: <br>
+							Example:
+                            </p>
 							<code>var myInput = $("#input").val();</code>
 							<p>
 								The above statement makes myInput represent the value of the text box with the id "input" at the time that function was used. Then, you can use the variable as a value for other functions.<br>
