@@ -313,22 +313,34 @@
 </html>
 '></code></pre>
 				<p>Despite being closely tied to HTML, CSS syntax looks quite different from that of HTML. CSS is made up primarily of three components: selectors, properties, and values. CSS properties are set to specific values through what is called a <em>declaration</em>, which is a property and value pair. Selectors specify which HTML element(s) the declarations are applied to. Here is a look of the format of CSS (leaving out the HTML):</p>
-				<pre><code class='code-block' data-code='
+<pre><code class='code-block' data-code='
 selector {
 	property: value;
 }
-				'></code></pre>
+'></code></pre>
 				<p>Keep in mind that this isn't valid CSS, just an example of what CSS looks like. CSS declarations for the HTML elements specify contained within the brackets:<code>{ }</code>. Inside the brackets, we have <code>property: value;</code>, which sets what is called a <em>property</em>, which is a keyword like <code>color</code>, to a value, like <code>red</code>. Finally, we have the semicolon at the end of the declaration in order to separate each declaration. Here's what some actual CSS might look like:</p>
-				<pre><code class='code-block' data-code='
+<pre><code class='code-block' data-code='
 h1 {
 	color: red;
 }
-				'></code></pre>
+'></code></pre>
 				<p>This CSS snippet would take all the <code>&lt;h1&gt;</code> elements, and apply <code>color: red;</code> to each one. <code>color</code> is the text color, and <code>red</code> is the, you guessed it, the color red, so this snippet would turn all of the <code>&lt;h1&gt;</code> elements and turn their text to the color red. Putting this into the <code>&lt;style&gt;</code> tags, we would get:</p>
 				<div>
 					<h1 style='color:red;'>LexHack!</h1>
 					<p>This is a very empty LexHack website.</p>
 				</div>
+				<p>CSS selectors can also select more than just elements. When you don't want to apply a style to all the elements of your site, you use an HTML attribute called <em>classes</em> and <em>ids</em>, which can be named anything. Here is an example of a <code>&lt;p&gt;</code> element with a "important" class: </p>
+<pre><code class='code-block' data-code='
+<p class="important">This paragraph has the class "important" associated with it! Neato.</p>
+'></code></pre>
+				<p>As you can see, in order to associate the "important" class, inside the <code>&lt;p&gt;</code> tag, there's <code>class="important"</code>. Always remember to put the name of the class in the quotation marks! To add additional classes, just separate the class names by a space (such as <code>class="classone classtwo"</code>, which would set the HTML element to the classes "classone" and "classtwo"). </p>
+				<p>With classes, we can be more flexible with our CSS, and use selectors to specify more than just a type of HTML element. With a class selector, we can specify styling to all elements associated with a specific class. To write a class selector, we prefix a normal selector with a period. Here's how looks with the "important" class as an example:</p>
+<pre><code class='code-block' data-code='
+.important {
+	color: red;
+}
+'></code></pre>
+			<p>This code snippet would make all elements with the "important" class have red text.</p>
 			</section>	
 
 			<section>
