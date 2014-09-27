@@ -60,8 +60,17 @@
 				<h1>Introduction</h1>
 			</header>
 			<p> Welcome to LexHack! To get started, first we’ll have to do a little bit of computer set-up. If you have problems doing any of the below, ask a LexHack mentor for assistance. We also have flashdrives available in case of internet problems. </p>
+         <p>
+         <h1>Table of Contents</h1>
+         <ul>
+         <li><a href="#html">HTML</a></li>
+         <li><a href="#css">CSS</a></li>
+         <li><a href="#javascript">JavaScript</a></li>
+         <li><a href="#jquery">jQuery</a> </li>
+         <li><a href="#firebase">Firebase</a></li>
+         </ul>
 		</section>
-		<section>
+		<section id="html">
 			<header>
 				<h1>Part 1: HTML</h1>
 			</header>
@@ -291,7 +300,7 @@
 				Try adding some “how-to” text of your choice right below the heading. 
 			</p>
 		</section>
-		<section>
+		<section id="css">
 			<header>
 				<h1>Part 2: CSS</h1>
 			</header>
@@ -343,7 +352,7 @@ h1 {
 			<p>This code snippet would make all elements with the "important" class have red text.</p>
 			</section>	
 
-			<section>
+			<section id="javascript">
 				<header>
 					<h1>Part 3: Javascript</h1>
 				</header>
@@ -469,7 +478,7 @@ function add(a, b){
 				<code>var result = 8;</code> <br>
 				which will make the variable result have a value of 8.
 			</section>
-			<section>
+			<section id="jquery">
 				<h1>Part 3.5: jQuery</h1>
 				<p>
 					Now that you’ve learned how to create, format, and style content on a webpage, and been exposed to some basic programming concepts, it’s time to practically apply these skills to a web application. Manipulating HTML ("the DOM") can be done entirely in JavaScript, but to make life easier we’re going to be using JQuery, a library of pre-written JavaScript code. jQuery’s slogan is "write less, do more," and might be helpful for you in trying to prototype your application in as little time as possible. You’re technically still writing in JavaScript, though, so all of the above is applicable.
@@ -628,6 +637,51 @@ $("#click-me").click(clickmeclicked);"
 	<p>
 		Finally, coming back to our example app Chirp, you can look in main.js to see the Javascript that governs the application. Everything is wrapped in the $(document).ready function described in the jQuery link, and it sets a click listener on the selected submit button $("#submit"). However, the majority of this code you won't understand yet - it requires knowledge of Firebase. 
 	</p>
+</section>
+<section id="firebase">
+<h1>Part 4: Firebase</h1>
+<p>
+The final part of your application is called the "backend" or "server-side" component. This is the part of an application that runs on a server, and deals with things like serving your webpage and interacting with your database. The backend can be enormously complex - like search indexing, file management, email sending and receiving, database (especially user data) management, etc. - but for simplicity, you're going to use a service called Firebase, which handles your backend for you. Using Firebase, you can access data stored on the cloud using Javascript on the "client side" of the application.
+</p>
+<p>
+First, sign up for Firebase (<a href="https://www.firebase.com/signup/">https://www.firebase.com/signup/</a>). You should see a little box titled "My First App", with a URL kind of like https://flickering-inferno-1483.firebaseio.com/. This URL is your Firebase's URL, and is how you access your data in the code. In Javascript, here is how you "initialize" your Firebase: <br>
+<code>var fb = new Firebase('https://your-firebase-0000.firebaseio.com');</code> <br>
+This lets you use the variable <code>fb</code> to access the Firebase at that URL.
+</p>
+<p>
+In Firebase, you can think of your data stored as sort of an online file system. Here's a line that gets run at the very beginning of Chirp: <br>
+<code>var postsRef = fb.child('posts');</code> <br>
+This sets the variable <code>postsRef</code> to a reference to a "child" of the Firebase called "posts". This essentially narrows down the scope of what you're looking at to data under "posts". You can think of posts as a folder on your online filesystem, and everything you do with <code>postsRef</code> will take place in that folder.
+</p>
+<p>
+Next, you can see that in Chirp we run a function on postsRef when the submit button is clicked. This function adds data to the filesystem, and looks like this: <br>
+<pre><code class='code-block' data-code='
+postsRef.push({
+   content: $("#message").val(),
+   date: new Date().toLocaleDateString("en-US")
+});
+'></code></pre>
+The function is called "push", and you can literally think of it as "pushing" more data into the folder. The data is written as a Javascript Object Literal, which for all intents and purposes is a key-value system. "Content" and "date" are keys, and each one corresponds to the value after it. In this case, the current value of the message box is stored as "content", while the current date is stored as "date" (don't worry about the fancy code to get the date for now).  
+</p>
+<p>
+To load data, we use a callback like in jQuery. This callback is called for every single piece of data already stored, as well as data that is entered while the site is loaded (allowing for real-time data transfer - how cool is that!) The code looks like this:
+<pre><code class='code-block' data-code='
+postsRef.on("child_added", function(data) {
+   var postData = data.val();
+   var content = postData.content;
+   var date = postData.date;
+   $("#messages").prepend("<div>"+date+"</div>");     
+   $("#messages").prepend("<div>"+content+"</div>");     
+});
+'></code></pre>
+The anonymous function passed into this callback has a parameter called data which contains the data added. To access the data, you first call <code>data.val()</code> and store that in another variable, in this case <code>postData</code>. Next, you can load the stored data using the same keys as the ones you "pushed" with. For example, <code>var content = postData.content;</code> loads the content of the post you're reading into the variable content. Finally, using jQuery we can edit messages to display the date and content. 
+</p>
+<p> 
+And that's it for a basic posting app using Firebase! There's a lot more you can do with it, and you can read all about it here - <a href="https://www.firebase.com/docs/web/guide/">https://www.firebase.com/docs/web/guide/</a>. 
+</p>
+<p>
+Good luck, happy hacking, and don't be afraid to seek out a mentor if you need help!
+</p>
 </section>
 </article>
 
