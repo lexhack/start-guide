@@ -269,7 +269,7 @@
 							<td>
 								<p dir="ltr">
 									&lt;img src=”imageurl"&gt; Image: inserts an image, specified by the URL in quotes. SRC is called an “attribute”; attributes can be
-									used for many things. See below.
+									used for many things. See below. Also, note how the img tag does not have a closing tag.
 								</p>
 							</td>
 							<td>
@@ -321,6 +321,7 @@
 </body>
 </html>
 '></code></pre>
+				<strong>CSS Syntax</strong>
 				<p>Despite being closely tied to HTML, CSS syntax looks quite different from that of HTML. CSS is made up primarily of three components: selectors, properties, and values. CSS properties are set to specific values through what is called a <em>declaration</em>, which is a property and value pair. Selectors specify which HTML element(s) the declarations are applied to. Here is a look of the format of CSS (leaving out the HTML):</p>
 <pre><code class='code-block' data-code='
 selector {
@@ -338,6 +339,9 @@ h1 {
 					<h1 style='color:red;'>LexHack!</h1>
 					<p>This is a very empty LexHack website.</p>
 				</div>
+				<a href='http://htmldog.com/reference/cssproperties/'>Here</a> is a link to an extended list of CSS properties and their different values. We recommend you take a look at several important properties like: color, font-size, height, width, and background-color. 
+
+				<strong>HTML Classes</strong>
 				<p>CSS selectors can also select more than just elements. When you don't want to apply a style to all the elements of your site, you use an HTML attribute called <em>classes</em> and <em>ids</em>, which can be named anything. Here is an example of a <code>&lt;p&gt;</code> element with a "important" class: </p>
 <pre><code class='code-block' data-code='
 <p class="important">This paragraph has the class "important" associated with it! Neato.</p>
@@ -350,6 +354,23 @@ h1 {
 }
 '></code></pre>
 			<p>This code snippet would make all elements with the "important" class have red text.</p>
+			<strong>Fonts</strong>
+			<p>Typography is an integral part of web design, and fonts being an important choice for any website. Fonts are a complicated business in CSS. Usually you only have access to the local computer's fonts, which generally mean that you have to stick to common fonts like Helvetica or Times, in order for it to render consistently across browser. However, thanks to <a href=' http://www.google.com/fonts/'>Google Fonts</a> (hit up that link), fonts are made trivial. Select a few fonts, and follow the steps provided by Google. Here's a full example:</p>
+<pre><code class='code-block' data-code="
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<style>
+		p{
+			font-family: 'Raleway', sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<p>This text is in the font Raleway!</p>
+</body>
+">
+</code></pre>
+			<p>What this is doing is getting the "Raleway" font using Google Fonts. Then, the <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/font-family'>font-family</a> property in the CSS is applying the font.
 			</section>	
 
 			<section id="javascript">
