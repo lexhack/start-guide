@@ -37,6 +37,12 @@
 		font-family: 'PT Sans';
 		font-size: 1.2em;
 	}
+	header a{
+		float: right;
+		vertical-align: top;
+	}
+	h1{font-size:1.5em;margin-top:3em;}
+	h2{font-size:1.2em;}
 	code {
 		color: black;
 		font-family: 'Inconsolata';
@@ -53,12 +59,13 @@
 	</style>
 </head>
 <body>
+	<a id="top"></a>
 	<article>
-		<section>
+		<section id="intro">
 			<header>
 				<h1>Introduction</h1>
 			</header>
-			<p> Welcome to LexHack! To get started, first we’ll have to do a little bit of computer set-up. If you have problems doing any of the below, ask a LexHack mentor for assistance. We also have flashdrives available in case of internet problems. </p>
+			<p> Welcome to <a href="http://lexhack.org">LexHack</a>! To get started, first we’ll have to do a little bit of computer set-up. If you have problems doing any of the below, <a href="http://live.lexhack.org/">ask a LexHack mentor</a> for assistance. </p>
          <p>
          <h1>Table of Contents</h1>
          <ul>
@@ -67,10 +74,12 @@
          <li><a href="#javascript">JavaScript</a></li>
          <li><a href="#jquery">jQuery</a> </li>
          <li><a href="#firebase">Firebase</a></li>
+         <li><a href="#wolfram">Appendix: Wolfram</a></li>
          </ul>
 		</section>
 		<section id="html">
 			<header>
+				<a href="#top">top</a>
 				<h1>Part 1: HTML</h1>
 			</header>
 			<p>All web pages are written in <em>HTML</em>, which stands for Hypertext Markup Language. A <em>markup language</em> is a system for annotating text that indicates to a computer how the text should be processed. Specifically, HTML tells a web browser how different content on a web page should be displayed.</p>
@@ -301,6 +310,7 @@
 		</section>
 		<section id="css">
 			<header>
+				<a href="#top">top</a>
 				<h1>Part 2: CSS</h1>
 			</header>
 			<p>You may have noticed that Chirp, our example application, and generally most websites, look much better than the plain one you've made so far.</p>
@@ -374,6 +384,7 @@ h1 {
 
 			<section id="javascript">
 				<header>
+					<a href="#top">top</a>
 					<h1>Part 3: Javascript</h1>
 				</header>
 				<p>
@@ -662,7 +673,10 @@ $("#click-me").click(clickmeclicked);"
 	</p>
 </section>
 <section id="firebase">
-<h1>Part 4: Firebase</h1>
+<header>
+	<a href="#top">top</a>
+	<h1>Part 4: Firebase</h1>
+</header>
 <p>
 The final part of your application is called the "backend" or "server-side" component. This is the part of an application that runs on a server, and deals with things like serving your webpage and interacting with your database. The backend can be enormously complex - like search indexing, file management, email sending and receiving, database (especially user data) management, etc. - but for simplicity, you're going to use a service called Firebase, which handles your backend for you. Using Firebase, you can access data stored on the cloud using Javascript on the "client side" of the application.
 </p>
@@ -707,6 +721,32 @@ Good luck, happy hacking, and don't be afraid to seek out a mentor if you need h
 </p>
 </section>
 </article>
+
+<article>
+	<section id="wolfram">
+		<header>
+			<a href="#top">top</a>
+			<h1>Appendix: Wolfram</h1>
+		</header>
+		<p>Wolfram has generously provided complete access to their Programming Cloud for 30 days! Access it at <a href="http://www.wolframcloud.com/access?code=LEXHACK2015">http://www.wolframcloud.com/access?code=LEXHACK2015</a>; you have to register an account with Wolfram.</p>
+		<p>This account will give access to three immensely powerful tools:</p>
+
+		<h2>Wolfram Language</h2>
+		<p>Allows you to program using built-in functions so that anything you create can instantly be deployed through API, web, mobile, and embedded code. You can use it for visualization and graphics, data manipulation and analysis, and all sorts of computation.</p>
+		<p>Check out examples here: <a href="https://www.wolfram.com/language/gallery/">https://www.wolfram.com/language/gallery/</a></p>
+
+		<h2>Wolfram Programming Cloud</h2>
+		<p>Allows you to write, test, and deploy your code directly in the cloud through any web browser - instantly.</p>
+		<p><a href="https://www.wolfram.com/programming-cloud/">https://www.wolfram.com/programming-cloud/</a></p>
+
+		<h2>Wolfram|Alpha API</h2>
+		<p>Computes complex natural-language-processing results delivered in a variety of formats.</p>
+		<p>Basics: <a href="http://products.wolframalpha.com/api/documentation.html#2">http://products.wolframalpha.com/api/documentation.html#2</a></p>
+		<p>Example: <a href="http://products.wolframalpha.com/api/documentation.html#4">http://products.wolframalpha.com/api/documentation.html#4</a></p>
+	</section>
+</article>
+
+<footer style="color:#ddd;text-align:center;margin-top:4em;">made with &lt;3 for <a style="color:#ddd;" href="http://lexhack.org">lexhack</a></footer>
 
 </body>
 </html>
