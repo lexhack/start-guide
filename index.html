@@ -377,17 +377,19 @@ h1 {
 			<strong>Fonts</strong>
 			<p>Typography is an integral part of web design, and fonts being an important choice for any website. Fonts are a complicated business in CSS. Usually you only have access to the local computer's fonts, which generally mean that you have to stick to common fonts like Helvetica or Times, in order for it to render consistently across browser. However, thanks to <a href=' http://www.google.com/fonts/'>Google Fonts</a> (hit up that link), fonts are made trivial. Select a few fonts, and follow the steps provided by Google. Here's a full example:</p>
 <pre><code class='code-block' data-code="
-<head>
-	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-	<style>
-		p{
-			font-family: 'Raleway', sans-serif;
-		}
-	</style>
-</head>
-<body>
-	<p>This text is in the font Raleway!</p>
-</body>
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<style>
+			p{
+				font-family: 'Raleway', sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+		<p>This text is in the font Raleway!</p>
+	</body>
+</html>
 ">
 </code></pre>
 			<p>What this is doing is getting the "Raleway" font using Google Fonts. Then, the <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/font-family'>font-family</a> property in the CSS is applying the font.
